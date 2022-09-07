@@ -1,6 +1,6 @@
-package accountOwners
+package accounts
 
-class Owner(
+class Account(
     val holder: String,
     val accountNumber: Int
 ) {
