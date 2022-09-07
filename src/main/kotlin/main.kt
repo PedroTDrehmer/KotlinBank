@@ -2,11 +2,14 @@ import accountOwners.Owner
 
 fun main() {
 
-    val nina = Owner()
+    val owner1 = Owner(
+        holder = "Nina",
+        accountNumber = 1000
+    )
 
-    println("Holder ${nina.holder}")
-    println("Account Number ${nina.accountNumber}")
-    println("Account Balance ${nina.balance}")
+    println("Holder ${owner1.holder}")
+    println("Account Number ${owner1.accountNumber}")
+    println("Account Balance ${owner1.balance}")
 
 //    when {
 //        balance > 0.0 -> println("Positive")
