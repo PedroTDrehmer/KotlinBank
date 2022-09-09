@@ -2,15 +2,26 @@ package accounts
 
 class Account(
     val holder: String,
-    val accountNumber: Int
+    val agency: Int,
+    var balance: Double
 ) {
-    var balance: Double = 0.0
 
     fun deposit(value: Double) {
-        this.balance += value
+        balance += value
     }
 
     fun withdraw(value: Double) {
-        this.balance -= value
+        if (balance >= value) {
+            balance -= value
+        }
+    }
+
+    fun transfer(value: Double, destination: Account): Boolean {
+        if (balance >= value) {
+            balance -= value
+            destination.deposit(value)
+            return true
+        }
+        return false
     }
 }
