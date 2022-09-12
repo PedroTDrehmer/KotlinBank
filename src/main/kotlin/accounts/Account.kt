@@ -3,8 +3,10 @@ package accounts
 class Account(
     val holder: String,
     val agency: Int,
-    var balance: Double
+    balance: Double
 ) {
+    var balance: Double = 0.0
+        private set
 
     fun deposit(value: Double) {
         balance += value
