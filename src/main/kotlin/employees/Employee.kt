@@ -6,6 +6,13 @@ open class Employee(
     var salary: Double,
     val type: Int
 ) {
+    override fun toString(): String {
+        return """
+            |Name ${name} 
+            |CPF ${cpf} 
+            |Salary ${salary} 
+            |Type ${type}""".trimMargin()
+    }
 
     fun bonus(): Double {
         return when (type) {

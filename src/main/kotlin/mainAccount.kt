@@ -2,24 +2,25 @@ import accounts.Account
 
 fun main() {
 
-    val account1 = Account(
+    val accountNina = Account(
         "Nina", 1000, 0.0
     )
 
-    val account2 = Account(
+    val accountJoao = Account(
         "Joao", 1000, 0.0
     )
-    account1.deposit(50.0)
-    account1.withdraw(40.0)
+    accountNina.deposit(50.0)
+    accountNina.withdraw(40.0)
 
-    if(account1.transfer(5.0, account2)){
+    if(accountNina.transfer(5.0, accountJoao)){
         println("transfer successful ")
     }else{
         println("fail")
     }
 
-    println("Holder ${account1.holder} Account Balance ${account1.balance}")
-    println("Holder ${account2.holder} Account Balance ${account2.balance}")
+    println("Holder ${accountNina.holder} Account Balance ${accountNina.balance}")
+    println("Holder ${accountJoao.holder} Account Balance ${accountJoao.balance}")
 
+    println(accountNina)
 
 }
