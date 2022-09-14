@@ -4,7 +4,8 @@ open class Employee(
     val name: String,
     val cpf: String,
     var salary: Double,
-    val type: Int
+    val type: Int,
+    val password: String
 ) {
     override fun toString(): String {
         return """
