@@ -1,9 +1,17 @@
 package employees
 
 class Manager(
-    holder: String,
+    name: String,
     cpf: String,
     salary: Double,
     type: Int,
-    password: String
-)
+    password: Int
+): Employee (name, cpf, salary, type, password) {
+
+    fun authentication(password: Int): Boolean {
+        if (this.password == password) {
+            return true
+        }
+        return false
+    }
+}

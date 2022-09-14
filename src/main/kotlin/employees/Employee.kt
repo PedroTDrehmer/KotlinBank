@@ -5,7 +5,7 @@ open class Employee(
     val cpf: String,
     var salary: Double,
     val type: Int,
-    val password: String
+    val password: Int
 ) {
     override fun toString(): String {
         return """
@@ -18,8 +18,8 @@ open class Employee(
     fun bonus(): Double {
         return when (type) {
             0 -> salary
-            1 -> salary * 0.1
-            else -> salary * 0.2
+            1 -> salary * 1.1
+            else -> salary * 1.2
         }
     }
 
