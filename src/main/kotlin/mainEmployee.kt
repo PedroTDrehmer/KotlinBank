@@ -7,7 +7,6 @@ fun main() {
        name = "Nelson",
        cpf =  "800.150.755-09",
        salary =  1250.0,
-       type =  0,
        password =  1234
     )
 
@@ -18,7 +17,6 @@ fun main() {
         name = "Fran",
         cpf =  "999.777.555-09",
         salary =  2000.0,
-        type =  1,
         password = 654
     )
 
@@ -30,4 +28,8 @@ fun main() {
     } else  {
         println("Wrong Password")
     }
+
+    val bonus = managerFran.bonus()
+
+    println(bonus)
 }

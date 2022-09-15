@@ -4,9 +4,10 @@ open class Employee(
     val name: String,
     val cpf: String,
     var salary: Double,
-    val type: Int,
     val password: Int
 ) {
+    open val type: Int = 0
+
     override fun toString(): String {
         return """
             |Name ${name} 
@@ -15,11 +16,11 @@ open class Employee(
             |Type ${type}""".trimMargin()
     }
 
-    fun bonus(): Double {
-        return when (type) {
-            0 -> salary
+    open fun bonus():Double {
+       return when (type) {
             1 -> salary * 1.1
-            else -> salary * 1.2
+            2 -> salary * 1.2
+            else -> salary
         }
     }
 
