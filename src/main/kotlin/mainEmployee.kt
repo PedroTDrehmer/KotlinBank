@@ -23,9 +23,4 @@ fun main() {
         println("Wrong Password")
     }
 
-    println(employeeNelson)
-    println("BONUS ${employeeNelson.bonus()}")
-    println()
-    println(managerFran)
-    println("BONUS ${managerFran.bonus()}")
 }
