@@ -1,6 +1,6 @@
 package employees
 
-class Manager(
+class Analyst(
     name: String,
     cpf: String,
     salary: Double,
@@ -10,6 +10,6 @@ class Manager(
     cpf,
     salary,
     password
-) {
-    override val typeBonus: Int = 2
+){
+    val typeBonus: Int = 2
 }

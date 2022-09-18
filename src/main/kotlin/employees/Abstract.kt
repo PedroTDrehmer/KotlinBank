@@ -1,11 +1,10 @@
 package employees
 
-class Abstract(
+abstract class Abstract(
     val name: String,
     val cpf: String,
     var salary: Double,
     val password: Int
 ) {
-
-    open val typeBonus: Int = 0
+    abstract val typeBonus: Int
 }
