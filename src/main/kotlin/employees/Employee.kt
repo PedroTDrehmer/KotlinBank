@@ -6,31 +6,29 @@ open class Employee(
     var salary: Double,
     val password: Int
 ) {
-    open val type: Int = 0
+    open val typeBonus: Int = 0
 
     override fun toString(): String {
         return """
             |Name ${name} 
             |CPF ${cpf} 
             |Salary ${salary} 
-            |Type ${type}""".trimMargin()
+            |Type Bonus ${typeBonus}
+            |Password ${password}""".trimMargin()
     }
 
     open fun bonus():Double {
-       return when (type) {
+       return when (typeBonus) {
             1 -> salary * 1.1
             2 -> salary * 1.2
             else -> salary
         }
     }
 
-//    fun bonus(): Double {
-//        return if (type == 0){
-//            salary
-//        } else if (type == 1){
-//            salary * 0.1
-//        } else {
-//            salary * 0.2
-//        }
-//    }
+    fun authentication(password: Int): Boolean {
+        if (this.password == password) {
+            return true
+        }
+        return false
+    }
 }

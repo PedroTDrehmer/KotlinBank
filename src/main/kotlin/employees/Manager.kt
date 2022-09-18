@@ -7,11 +7,6 @@ class Manager(
     password: Int
     ) : Employee(name, cpf, salary, password) {
 
-    override val type: Int = 2
-    fun authentication(password: Int): Boolean {
-        if (this.password == password) {
-            return true
-        }
-        return false
-    }
+    override val typeBonus: Int = 2
+
 }
