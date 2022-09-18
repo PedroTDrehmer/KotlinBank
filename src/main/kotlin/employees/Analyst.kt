@@ -11,5 +11,5 @@ class Analyst(
     salary,
     password
 ){
-    val typeBonus: Int = 2
+    override val typeBonus: Int = 2
 }
