@@ -1,10 +1,9 @@
 package employees
 
-abstract class Employee(
+abstract class AbstractEmployee(
     val name: String,
     val cpf: String,
     var salary: Double,
-    val password: Int
 ) {
     open val typeBonus: Int = 0
 
@@ -13,8 +12,7 @@ abstract class Employee(
             |Name ${name} 
             |CPF ${cpf} 
             |Salary ${salary} 
-            |Type Bonus ${typeBonus}
-            |Password ${password}""".trimMargin()
+            |Type Bonus ${typeBonus}""".trimMargin()
     }
 
     open fun bonus():Double {
@@ -23,12 +21,5 @@ abstract class Employee(
             2 -> salary * 1.2
             else -> salary
         }
-    }
-
-    fun authentication(password: Int): Boolean {
-        if (this.password == password) {
-            return true
-        }
-        return false
     }
 }
