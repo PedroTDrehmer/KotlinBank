@@ -5,7 +5,7 @@ class Manager(
     cpf: String,
     salary: Double,
     password: Int
-) : AdmEmployee(
+) : AuthenEmployee(
     name,
     cpf,
     salary,

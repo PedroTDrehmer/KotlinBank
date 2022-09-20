@@ -1,11 +1,11 @@
 package employees
 
-abstract class AdmEmployee(
+abstract class AuthenEmployee(
     name: String,
     cpf: String,
     salary: Double,
-    private val password: Int
-) : AbstractEmployee(
+    val password: Int
+) : Employee(
     name,
     cpf,
     salary

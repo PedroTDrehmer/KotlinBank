@@ -1,6 +1,6 @@
 package employees
 
-abstract class AbstractEmployee(
+abstract class Employee(
     val name: String,
     val cpf: String,
     var salary: Double,
