@@ -1,14 +1,16 @@
 package system
 
-import employees.AuthenEmployee
+import Authenticable
 
 class InternalSystem {
 
-    fun enter(admin: AuthenEmployee, password: Int) {
-        if(admin.authentication(password)){
-            println("Welcome")
-        } else{
-            println("Error")
+
+    fun enter(nome: Authenticable, password: Int): Boolean {
+        if (nome.password == password) {
+            println("CORRECTLY PASSWORD")
+            return true
         }
+        println("WRONG PASSWORD")
+        return false
     }
 }
