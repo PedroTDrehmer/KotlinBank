@@ -1,13 +1,13 @@
 package br.com.bank.accounts
 
 class AccountChecking(
-    holder: String,
+    holder: Client,
     agency: Int,
-    balance: Double
+    number: Int
 ) : Account(
     holder,
     agency,
-    balance
+    number
 ) {
 
     override fun withdraw(value: Double) {

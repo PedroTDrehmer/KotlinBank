@@ -1,4 +1,4 @@
-import br.com.bank.Clients.Client
+import br.com.bank.accounts.Client
 import br.com.bank.employees.Manager
 import br.com.bank.system.InternalSystem
 

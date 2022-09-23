@@ -1,4 +1,4 @@
-package br.com.bank.Clients
+package br.com.bank.accounts
 
 import br.com.bank.employees.Authenticable
 

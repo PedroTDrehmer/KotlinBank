@@ -1,9 +1,9 @@
 package br.com.bank.accounts
 
 abstract class Account(
-    val holder: String,
+    val holder: Client,
     val agency: Int,
-    balance: Double
+    val number: Int
 ) {
     var balance: Double = 0.0
         protected set
