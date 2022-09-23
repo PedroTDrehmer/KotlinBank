@@ -1,6 +1,6 @@
-package system
+package br.com.bank.system
 
-import Authenticable
+import br.com.bank.employees.Authenticable
 
 class InternalSystem {
 

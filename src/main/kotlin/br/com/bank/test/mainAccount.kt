@@ -1,4 +1,4 @@
-import accounts.Account
+import br.com.bank.accounts.Account
 
 fun main() {
 

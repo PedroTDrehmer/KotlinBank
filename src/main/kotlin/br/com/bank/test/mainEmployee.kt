@@ -1,7 +1,6 @@
-import Clients.Client
-import employees.AuthenEmployee
-import employees.Manager
-import system.InternalSystem
+import br.com.bank.Clients.Client
+import br.com.bank.employees.Manager
+import br.com.bank.system.InternalSystem
 
 fun main() {
 

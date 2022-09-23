@@ -1,24 +1,24 @@
-package accounts
+package br.com.bank.accounts
 
-class Account(
+abstract class Account(
     val holder: String,
     val agency: Int,
     balance: Double
 ) {
     var balance: Double = 0.0
-        private set
+        protected set
 
     fun deposit(value: Double) {
         balance += value
     }
 
-    fun withdraw(value: Double) {
+    open fun withdraw(value: Double) {
         if (balance >= value) {
             balance -= value
         }
     }
 
-    fun transfer(value: Double, destination: Account): Boolean {
+    open fun transfer(value: Double, destination: Account): Boolean {
         if (balance >= value) {
             balance -= value
             destination.deposit(value)

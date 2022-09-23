@@ -1,6 +1,6 @@
-package Clients
+package br.com.bank.Clients
 
-import Authenticable
+import br.com.bank.employees.Authenticable
 
 class Client (
     val name: String,

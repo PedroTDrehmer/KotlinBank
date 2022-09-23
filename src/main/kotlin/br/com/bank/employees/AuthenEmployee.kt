@@ -1,6 +1,4 @@
-package employees
-
-import Authenticable
+package br.com.bank.employees
 
 abstract class AuthenEmployee(
     name: String,

@@ -1,6 +1,4 @@
-package employees
-
-import Authenticable
+package br.com.bank.employees
 
 class Manager(
     name: String,
@@ -12,7 +10,7 @@ class Manager(
     cpf,
     salary,
     password
-), Authenticable{
+), Authenticable {
 
 
     override val typeBonus: Int = 2
