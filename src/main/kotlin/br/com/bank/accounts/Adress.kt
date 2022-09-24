@@ -1,6 +1,6 @@
 package br.com.bank.accounts
 
-class Adress (
-    val city: String = "",
+data class Adress (
+    var city: String = "",
     var complement: String = ""
 )

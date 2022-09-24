@@ -1,12 +1,18 @@
 package br.com.bank.accounts
 
+import br.com.bank.test.totalAccounts
+
 abstract class Account(
     val holder: Client,
-    val agency: Int,
-    val number: Int
+    val agency: Int
 ) {
     var balance: Double = 0.0
         protected set
+
+    init {
+        println("Creating Account")
+        totalAccounts++
+    }
 
     fun deposit(value: Double) {
         balance += value

@@ -1,8 +1,8 @@
 import br.com.bank.accounts.*
 
-fun main() {
+fun mainAccount() {
 
-    var enderecoNina = Adress(city = "salvador")
+    var enderecoNina = Adress()
 
     val Nina = Client(
         name = "Nina",
@@ -12,9 +12,31 @@ fun main() {
     )
 
     val accountNina = AccountSavings(
-        Nina, 101, 111
+        Nina, 101
     )
 
+    val Maia = Client(
+        name = "Maia",
+        cpf = "777",
+        password = 123,
+        adress = Adress()
+    )
+
+    val accountMaia = AccountSavings(
+        Maia, 101
+    )
+
+    println(accountNina.holder.adress.city)
+    println(Nina)
+
+    println(accountMaia.holder)
+
+
+
+
+
+
+/*
     val Joao = Client(
         name = "Joao",
         cpf = "777",
@@ -24,18 +46,16 @@ fun main() {
     val accountJoao = AccountChecking(
         Joao, 101, 222
     )
-//    accountNina.deposit(50.0)
-//    accountNina.withdraw(40.0)
-//
-//    if(accountNina.transfer(5.0, accountJoao)){
-//        println("transfer successful ")
-//    }else{
-//        println("fail")
-//    }
-//
-//    println("Holder ${accountNina.holder} Account Balance ${accountNina.balance}")
-//    println("Holder ${accountJoao.holder} Account Balance ${accountJoao.balance}")
+    accountNina.deposit(50.0)
+    accountNina.withdraw(40.0)
 
-    println(accountNina.holder.adress.city)
+    if(accountNina.transfer(5.0, accountJoao)){
+        println("transfer successful ")
+    }else{
+        println("fail")
+    }
 
+    println("Holder ${accountNina.holder} Account Balance ${accountNina.balance}")
+    println("Holder ${accountJoao.holder} Account Balance ${accountJoao.balance}")
+*/
 }

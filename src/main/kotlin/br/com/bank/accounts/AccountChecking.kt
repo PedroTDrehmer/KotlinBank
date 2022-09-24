@@ -3,11 +3,10 @@ package br.com.bank.accounts
 class AccountChecking(
     holder: Client,
     agency: Int,
-    number: Int
 ) : Account(
     holder,
     agency,
-    number
+
 ) {
 
     override fun withdraw(value: Double) {
