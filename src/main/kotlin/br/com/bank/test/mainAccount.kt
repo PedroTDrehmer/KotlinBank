@@ -27,9 +27,23 @@ fun main () {
     )
 
 
-    println(accountMaia.balance)
 
     accountMaia.deposit(10.0)
+    println(accountMaia.balance)
+//    accountMaia.withdraw(5.0)
+//    println(accountMaia.balance)
+    println(accountNina.balance)
+    accountMaia.transfer(11.0,accountNina)
+    println(accountNina.balance)
+
+
+
+
+
+
+
+
+
 
 
 
