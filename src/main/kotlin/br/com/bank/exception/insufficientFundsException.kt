@@ -1,3 +1,5 @@
 package br.com.bank.exception
 
-class insufficientFundsException :Exception("Insufficient Funds")
+import java.lang.RuntimeException
+
+class insufficientFundsException : RuntimeException ()
