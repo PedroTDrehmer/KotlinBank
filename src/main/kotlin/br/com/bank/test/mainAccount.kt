@@ -1,6 +1,6 @@
 import br.com.bank.accounts.*
 
-fun mainAccount() {
+fun main () {
 
     var enderecoNina = Adress()
 
@@ -26,10 +26,10 @@ fun mainAccount() {
         Maia, 101
     )
 
-    println(accountNina.holder.adress.city)
-    println(Nina)
 
-    println(accountMaia.holder)
+    println(accountMaia.balance)
+
+    accountMaia.deposit(10.0)
 
 
 
@@ -37,6 +37,13 @@ fun mainAccount() {
 
 
 /*
+
+  println(accountNina.holder.adress.city)
+    println(Nina)
+
+    println(accountMaia.holder)
+    println(accountMaia)
+
     val Joao = Client(
         name = "Joao",
         cpf = "777",

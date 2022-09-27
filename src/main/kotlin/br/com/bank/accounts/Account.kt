@@ -1,5 +1,6 @@
 package br.com.bank.accounts
 
+import br.com.bank.exception.insufficientFundsException
 import br.com.bank.test.totalAccounts
 
 abstract class Account(
@@ -15,12 +16,18 @@ abstract class Account(
     }
 
     fun deposit(value: Double) {
-        balance += value
+        if(balance >= value){
+            println("Successful Deposit")
+        } else{
+            throw insufficientFundsException()
+        }
     }
 
     open fun withdraw(value: Double) {
         if (balance >= value) {
-            balance -= value
+            println("Successful Deposit")
+        } else {
+            throw insufficientFundsException()
         }
     }
 
