@@ -16,32 +16,27 @@ abstract class Account(
     }
 
     fun deposit(value: Double) {
-        try {
-            balance += value
-            println("Successful Deposit")
-        } catch (e: insufficientFundsException) {
-            println("Insufficient Funds")
-        }
+        balance += value
     }
 
     fun withdraw(value: Double) {
-        try {
-            (balance >= value)
+        if (balance >= value) {
             balance -= value
             println("Successful Withdraw")
-        } catch (e: insufficientFundsException) {
+        } else {
             println("Insufficient Funds")
+            throw insufficientFundsException()
         }
     }
 
     fun transfer(value: Double, destination: Account) {
-        try {
-            (balance >= value)
+        if (balance >= value) {
             balance -= value
             destination.deposit(value)
             println("Successful Transfer")
-        } catch (e: insufficientFundsException) {
+        } else {
             println("Insufficient Funds")
+            throw insufficientFundsException()
         }
     }
 }

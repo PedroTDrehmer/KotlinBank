@@ -28,19 +28,15 @@ fun main () {
     )
 
 
-    accountMaia.deposit(10.0)
-    println(accountMaia.balance)
+    accountMaia.deposit(0.0)
 
-    accountMaia.withdraw(5.0)
-    println(accountMaia.balance)
-    println(accountNina.balance)
+    accountMaia.withdraw(0.0)
 
-    accountMaia.transfer(11.0,accountNina)
+    accountMaia.transfer(0.0,accountNina)
 
-    println(accountNina.balance)
+    println("\nSALDO CONTA MAIA ${accountMaia.balance}")
 
-
-
+    println("\nSALDO CONTA NINA ${accountNina.balance}")
 
 
 /*
